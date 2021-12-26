@@ -4,7 +4,8 @@ import { makeStyles } from '@mui/styles';
 import Toolbar from '@mui/material/Toolbar';
 import { NavLink } from 'react-router-dom';
 import { Stack } from '@mui/material';
-
+import { useNavigate } from 'react-router-dom';
+import { Button } from '@mui/material';
 
 
 const useStyle = makeStyles({
@@ -20,7 +21,7 @@ const useStyle = makeStyles({
 })
 
 const NavBar = () => {
-
+    const navigate = useNavigate();
     const classes = useStyle();
     return (
       <>
@@ -39,7 +40,7 @@ const NavBar = () => {
             </Toolbar>
         </AppBar>
         </Stack>
-         
+        <Button onClick={() => navigate('/admin/all')}> home </Button>
          </>
     )
 }
