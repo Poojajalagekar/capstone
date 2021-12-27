@@ -20,7 +20,7 @@ const useStyle = makeStyles({
     }
 })
 
-const NavBar = () => {
+const Admin = () => {
     const navigate = useNavigate();
     const classes = useStyle();
     return (
@@ -33,16 +33,27 @@ const NavBar = () => {
       </AppBar>
 
         <AppBar position="static" className={classes.header}>
+            NOTICE BOARD
             <Toolbar>
-                <NavLink className={classes.tabs} to="./" exact>Code for Interview</NavLink>
-                <NavLink className={classes.tabs} to="all" exact>All Users</NavLink>
-                <NavLink className={classes.tabs} to="add" exact>Add User</NavLink>
+               
+                <NavLink className={classes.tabs} to="all" exact>ALL MESSAGES</NavLink>
+                <NavLink className={classes.tabs} to="add" exact>ADD MESSAGES</NavLink>
             </Toolbar>
         </AppBar>
         </Stack>
         <Button onClick={() => navigate('/admin/all')}> home </Button>
+
+        <AppBar position="static" className={classes.header}>
+            UPLOAD BOOKS
+            <Toolbar>
+               
+                <NavLink className={classes.tabs} to="/upload" exact>UPLOAD</NavLink>
+               
+            </Toolbar>
+        </AppBar>
+        
          </>
     )
 }
 
-export default NavBar;
+export default Admin;

@@ -14,7 +14,7 @@ const initialValue = {
   name: ''
 }
 
-const AddUser = () => {
+const AddMsg = () => {
     const [user, setUser] = useState(initialValue);
     const { name } = user;
     const navigate = useNavigate();
@@ -49,4 +49,4 @@ const AddUser = () => {
     )
 }
 
-export default AddUser;
+export default AddMsg;

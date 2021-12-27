@@ -20,7 +20,7 @@ const initialValue = {
   
 }
 
-const EditUser = () => {
+const EditMsg = () => {
     const [user, setUser] = useState(initialValue);
     const { name } = user;
     const { id } = useParams(); 
@@ -65,4 +65,4 @@ const EditUser = () => {
     )
 }
 
-export default EditUser;
+export default EditMsg;
