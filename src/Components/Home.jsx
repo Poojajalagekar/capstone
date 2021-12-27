@@ -1,15 +1,15 @@
-import Button from '@mui/material/Button'; 
-import { useNavigate } from 'react-router-dom';
-
+import Button from '@mui/material/Button'
+import { useNavigate } from 'react-router-dom'
+import Merger from '../Components/HomeData/Merger'
 
 const HomePage = () => {
-    const navigate = useNavigate();
-    return (
-        <>
-       <h1> home page</h1>
-       <Button onClick={() => navigate('/home')}> home </Button>
-      </>
-    )
+  const navigate = useNavigate()
+  return (
+    <>
+      <Merger />
+      {/* <Button onClick={() => navigate('/home')}> home </Button> */}
+    </>
+  )
 }
 
-export default HomePage;
+export default HomePage
