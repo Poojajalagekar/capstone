@@ -48,7 +48,7 @@ const Admin = () => {
           </Toolbar>
         </AppBar>
       </Stack>
-      <Button onClick={() => navigate('/admin/all')}> home </Button>
+      <Button onClick={() => navigate('/home')}> home </Button>
 
       <AppBar position='static' className='upload'>
         UPLOAD BOOKS

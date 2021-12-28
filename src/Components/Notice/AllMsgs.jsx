@@ -53,11 +53,12 @@ const AllMsgs = () => {
     await deleteUser(id)
     getAllMsgs()
   }
+  
   return (
     <>
       <Navbar />
-      <Box sx={{ p: 2, margin: 'auto', width: '80%', overflow: 'hidden' }}>
-        <TableContainer component={Paper} sx={{ maxHeight: 200 }}>
+      <Box sx={{ p: 5, margin: 'auto', width: '80%', overflow: 'hidden' }}>
+        <TableContainer component={Paper} sx={{ maxHeight: 300 }}>
           <Table stickyHeader aria-label='sticky table'>
             <TableHead>
               <TableRow>

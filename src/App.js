@@ -7,6 +7,7 @@ import HomePage from './Components/Home'
 import AllMsgs from './Components/Notice/AllMsgs'
 import AddMsg from './Components/Notice/AddMsg'
 import EditMsg from './Components/Notice/EditMsg'
+import Upload from './Components/Upload'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='admin/add' element={<AddMsg />} />
         <Route path='admin/all' element={<AllMsgs />} />
         <Route path='admin/edit/:id' element={<EditMsg />} />
+        <Route path='/upload' element={<Upload />} />
       </Routes>
     </BrowserRouter>
   )

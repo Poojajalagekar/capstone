@@ -1,22 +1,23 @@
+import Navbar from '../Components/HomeData/Navbar'
+import { addUser} from './Notice/api'
 import FormControl from '@mui/material/FormControl'
 import { FormGroup } from '@mui/material'
 import { Input } from '@mui/material'
 import { InputLabel } from '@mui/material'
 import { FormHelperText } from '@mui/material'
 import { Box } from '@mui/system'
-import Navbar from '../HomeData/Navbar'
 import { Button } from '@mui/material'
 import Typography from '@mui/material/Typography'
 import { useState } from 'react'
-import { addUser } from './api'
-import '../HomeData/Homedata.css'
+import '../Components/HomeData/Homedata.css'
 import { useNavigate } from 'react-router-dom'
+
 
 const initialValue = {
   name: '',
 }
 
-const AddMsg = () => {
+const Upload = () => {
   const [user, setUser] = useState(initialValue)
   const { name } = user
   const navigate = useNavigate()
@@ -35,18 +36,50 @@ const AddMsg = () => {
       <Navbar />
       <Box sx={{ p: 15, margin: 'auto', maxWidth: 500 }}>
         <FormGroup>
-          <Typography variant='h4'>NOTICE BOARD</Typography>
+          <Typography variant='h4' >UPLOAD BOOKS</Typography>
           <FormControl>
-            <InputLabel htmlFor='my-input'>MSG</InputLabel>
+            <InputLabel htmlFor='my-input'>BOOK NAME</InputLabel>
             <Input
               id='my-input'
               onChange={(e) => onValueChange(e)}
               name='name'
               value={name}
             />
-            <FormHelperText id='my-helper-text'>YoUR MSG PLZ</FormHelperText>
+            <FormHelperText id='my-helper-text'>BOOK NAME</FormHelperText>
           </FormControl>
 
+          <FormControl>
+            <InputLabel htmlFor='my-input'>DEPARTMENT</InputLabel>
+            <Input
+              id='my-input'
+              onChange={(e) => onValueChange(e)}
+              name='name'
+              value={name}
+            />
+            <FormHelperText id='my-helper-text'>DETAILS</FormHelperText>
+          </FormControl> 
+          
+          <FormControl>
+            <InputLabel htmlFor='my-input'>AUTHOR</InputLabel>
+            <Input
+              id='my-input'
+              onChange={(e) => onValueChange(e)}
+              name='name'
+              value={name}
+            />
+            <FormHelperText id='my-helper-text'>DETAILS</FormHelperText>
+          </FormControl> 
+
+          <Button
+            variant='contained'
+            color='primary'
+            style={{ marginBottom: 10 }}
+            onClick={() => addUserDetails()}
+          >
+            {' '}
+            UPLOAD{' '}
+          </Button>
+          
           <Button
             variant='contained'
             color='primary'
@@ -61,4 +94,4 @@ const AddMsg = () => {
   )
 }
 
-export default AddMsg
+export default Upload

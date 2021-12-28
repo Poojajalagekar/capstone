@@ -43,7 +43,7 @@ const EditMsg = () => {
 
     const editUserDetails = async () => {
         await editUser(id,user);
-        navigate('/admin/all');
+        navigate('/home');
     }
     
     return (

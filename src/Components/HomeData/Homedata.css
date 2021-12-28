@@ -7,7 +7,7 @@ body {
 }
 
 .merger {
-  background-image: linear-gradient(90deg, #517879 5%, #1e3e57 44%, #517879);
+  background-image: linear-gradient(90deg, #8bc2c4 5%, #3c92d4 44%, #336db9);
 
   height: 100vh;
 }
@@ -21,7 +21,7 @@ body {
   line-height: 34px;
   border: 1px solid black;
 
-  background-image: linear-gradient(90deg, #9d0b28, #5a082d 80%, #9d0b28);
+  background-image: linear-gradient(90deg, #9d0b28, #e46ba1 80%, #9d0b28);
 }
 
 .navLeftBar {
@@ -64,7 +64,7 @@ body {
   border-radius: 15px;
   text-align: center;
   position: relative;
-  background-image: linear-gradient(90deg, #92505d, #442030 60%, #92505d);
+  background-image: linear-gradient(90deg, #92505d, #c5618e 60%, #92505d);
   top: 10px;
   width: 420px;
   height: 150px;
@@ -76,7 +76,7 @@ body {
   border-radius: 35px;
   text-align: center;
   position: relative;
-  background-image: linear-gradient(95deg, #91dfd2, #2e5a3d 60%, #91dfd2);
+  background-image: linear-gradient(95deg, #91dfd2, #4dcf79 60%, #91dfd2);
   top: 10px;
   width: 420px;
   height: 150px;
