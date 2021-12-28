@@ -6,8 +6,8 @@ function Navbar() {
           <input type='text' className='navLeftBar' placeholder='Search' />
         </div>
 
-        <div className='navMid'>Navbar</div>
-        <div className='navRight'>profileicon</div>
+        <div className='navMid'>Virtual-Library.com</div>
+        <div className='navRight'>Icon</div>
       </div>
     </>
   )

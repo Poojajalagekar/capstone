@@ -1,13 +1,12 @@
 import Navbar from './Navbar'
-import Notice from './Notice'
+import AllMsgs from '../Notice/AllMsgs'
 import Branches from './Branches'
 
 function Merger() {
   return (
     <>
       <div className='merger'>
-        <Navbar />
-        <Notice />
+        <AllMsgs />
         <Branches />
       </div>
     </>
