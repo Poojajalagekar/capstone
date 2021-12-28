@@ -76,7 +76,7 @@ body {
   border-radius: 35px;
   text-align: center;
   position: relative;
-  background-image: linear-gradient(95deg, #91dfd2, #4dcf79 60%, #91dfd2);
+  background-image: linear-gradient(95deg, #57f0d6, #4dcf79 60%, #91dfd2);
   top: 10px;
   width: 420px;
   height: 150px;
@@ -88,7 +88,7 @@ body {
 }
 
 .tbx {
-  background-image: linear-gradient(120deg, #91dfd2 50%, #093116 60%);
+  background-image: linear-gradient(120deg, #91dfd2 50%, #52eb85 60%);
   color: black;
   display: flex;
 

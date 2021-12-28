@@ -27,37 +27,41 @@ const useStyle = makeStyles({
 })
 
 const Admin = () => {
-  const navigate = useNavigate()
+  
   const classes = useStyle()
   return (
     <>
-      <Stack spacing={2}>
+      <Stack spacing={7}>
         <AppBar position='static'>
           <Toolbar className='ATB'>The-Admins-Den</Toolbar>
         </AppBar>
 
-        <AppBar position='static' className='headApp'>
+        <AppBar position='static' className='upload'>
           NOTICE BOARD
           <Toolbar className='tbx'>
             <NavLink className={classes.tabs} to='all' exact>
               ALL MESSAGES
             </NavLink>
-            <NavLink className={classes.tabbs} to='add' exact>
+            <NavLink className={classes.tabs} to='add' exact>
               ADD MESSAGES
             </NavLink>
           </Toolbar>
         </AppBar>
-      </Stack>
-      <Button onClick={() => navigate('/home')}> home </Button>
+      
+     
 
       <AppBar position='static' className='upload'>
         UPLOAD BOOKS
-        <Toolbar>
-          <NavLink className='upload' to='/upload' exact>
+        <Toolbar className='tbx'>
+          <NavLink className={classes.tabs} to='/upload' exact>
             UPLOAD
+          </NavLink>
+          <NavLink className={classes.tabs} to='/home' exact>
+            HOME 
           </NavLink>
         </Toolbar>
       </AppBar>
+      </Stack>
     </>
   )
 }
