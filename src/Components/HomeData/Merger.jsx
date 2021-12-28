@@ -5,9 +5,11 @@ import Branches from './Branches'
 function Merger() {
   return (
     <>
-      <Navbar />
-      <Notice />
-      <Branches />
+      <div className='merger'>
+        <Navbar />
+        <Notice />
+        <Branches />
+      </div>
     </>
   )
 }
