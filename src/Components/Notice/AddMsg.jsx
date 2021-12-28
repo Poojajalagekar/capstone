@@ -11,6 +11,8 @@ import { useState } from 'react'
 import { addUser } from './api'
 import '../HomeData/Homedata.css'
 import { useNavigate } from 'react-router-dom'
+import { AppBar } from '@mui/material'
+import { Toolbar } from '@mui/material'
 
 const initialValue = {
   name: '',
@@ -33,6 +35,9 @@ const AddMsg = () => {
   return (
     <>
       <Navbar />
+        <AppBar position='static'>
+          <Toolbar className='ATB'>ADD MESSAGES </Toolbar>
+        </AppBar>
       <Box sx={{ p: 15, margin: 'auto', maxWidth: 500 }}>
         <FormGroup>
           <Typography variant='h4'>NOTICE BOARD</Typography>

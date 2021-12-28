@@ -15,6 +15,8 @@ import { getUsers } from './api'
 import { deleteUser } from './api'
 import DeleteIcon from '@mui/icons-material/Delete'
 import EditIcon from '@mui/icons-material/Edit'
+import { AppBar } from '@mui/material'
+import { Toolbar } from '@mui/material'
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -53,10 +55,13 @@ const AllMsgs = () => {
     await deleteUser(id)
     getAllMsgs()
   }
-  
+
   return (
     <>
       <Navbar />
+      <AppBar position='static'>
+          <Toolbar className='ATB'>ALL MESSAGES </Toolbar>
+        </AppBar>
       <Box sx={{ p: 5, margin: 'auto', width: '80%', overflow: 'hidden' }}>
         <TableContainer component={Paper} sx={{ maxHeight: 300 }}>
           <Table stickyHeader aria-label='sticky table'>

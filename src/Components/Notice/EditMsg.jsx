@@ -12,8 +12,9 @@ import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import { getUsers } from './api';
 import { editUser } from './api';
-
-
+import Navbar from '../HomeData/Navbar';
+import { AppBar } from '@mui/material';
+import { Toolbar } from '@mui/material';
 
 const initialValue = {
   name: ''
@@ -46,7 +47,12 @@ const EditMsg = () => {
         navigate('/home');
     }
     
-    return (
+    return ( 
+         <>
+        <Navbar />
+        <AppBar position='static'>
+          <Toolbar className='ATB'>EDIT MESSAGES </Toolbar>
+        </AppBar>
         <Box sx={{p: 15, margin: 'auto', maxWidth: 500,  }}>
             
         <FormGroup>
@@ -62,6 +68,7 @@ const EditMsg = () => {
       </FormGroup>
     
       </Box>
+      </>
     )
 }
 
