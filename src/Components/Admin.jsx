@@ -27,7 +27,6 @@ const useStyle = makeStyles({
 })
 
 const Admin = () => {
-  
   const classes = useStyle()
   return (
     <>
@@ -47,20 +46,18 @@ const Admin = () => {
             </NavLink>
           </Toolbar>
         </AppBar>
-      
-     
 
-      <AppBar position='static' className='upload'>
-        UPLOAD BOOKS
-        <Toolbar className='tbx'>
-          <NavLink className={classes.tabs} to='/upload' exact>
-            UPLOAD
-          </NavLink>
-          <NavLink className={classes.tabs} to='/home' exact>
-            HOME 
-          </NavLink>
-        </Toolbar>
-      </AppBar>
+        <AppBar position='static' className='upload'>
+          UPLOAD BOOKS
+          <Toolbar className='tbx'>
+            <NavLink className={classes.tabs} to='/upload' exact>
+              UPLOAD
+            </NavLink>
+            <NavLink className={classes.tabs} to='/home' exact>
+              HOME
+            </NavLink>
+          </Toolbar>
+        </AppBar>
       </Stack>
     </>
   )
