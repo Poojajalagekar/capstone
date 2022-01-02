@@ -2,12 +2,7 @@ function Navbar() {
   return (
     <>
       <div className='navBar'>
-        <div className='navLeft'>
-          <input type='text' className='navLeftBar' placeholder='Search' />
-        </div>
-
-        <div className='navMid'>Virtual-Library.com</div>
-        <div className='navRight'>Icon</div>
+        <h1 className='home'> Virtual-Library.com</h1>
       </div>
     </>
   )

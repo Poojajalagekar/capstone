@@ -1,23 +1,16 @@
 {
   "msgs": [
     {
-      "name": "Pooja Jalagekar7452",
+      "name": "Pooja Jalagekar",
+      "id": 1
+    },
+    {
+      "name": "none",
       "id": 2
     },
     {
-      "name": "Pooja Jalagekar",
+      "name": "MS Dhoni",
       "id": 3
-<<<<<<< HEAD
-=======
-    },
-    {
-      "name": "hello",
-      "id": 4
-    },
-    {
-      "name": "test message",
-      "id": 5
->>>>>>> 430a1710cdc8933c03799d40f3cb614f552ffd89
     }
   ]
 }

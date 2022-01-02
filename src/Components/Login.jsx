@@ -1,6 +1,5 @@
 import Button from '@mui/material/Button'
 import Navbar from '../Components/HomeData/Navbar'
-import { addUser} from './Notice/api'
 import FormControl from '@mui/material/FormControl'
 import { FormGroup } from '@mui/material'
 import { Input } from '@mui/material'
@@ -8,46 +7,23 @@ import { InputLabel } from '@mui/material'
 import { FormHelperText } from '@mui/material'
 import { Box } from '@mui/system'
 import Typography from '@mui/material/Typography'
-import { useState } from 'react'
 import '../Components/HomeData/Homedata.css'
 import { useNavigate } from 'react-router-dom'
 
-
-const initialValue = {
-  name: '',
-}
-
 const Login = () => {
-  const navigate = useNavigate()
-
-  const [user, setUser] = useState(initialValue)
-  const { name } = user
-
-
-  const onValueChange = (e) => {
-    console.log(e.target.value)
-    setUser({ ...user, [e.target.name]: e.target.value })
-  }
-
-  const addUserDetails = async () => {
-    await addUser(user)
-    navigate('/home')
-  }
+  const navigate = useNavigate();
+ 
   return (
     <>
       <Navbar />
-      <Button onClick={() => navigate('/admin')}> admin </Button>
-      <Button onClick={() => navigate('/home')}> Home </Button>
-      <Box sx={{ p: 15, margin: 'auto', maxWidth: 500 }}>
+      <Button onClick={() => navigate('adlogin')}> LOGIN </Button>
+      <Box sx={{ p: 15, margin: 'auto', maxWidth: 700 }}>
         <FormGroup>
-          <Typography variant='h4' >LOGIN</Typography>
+          <Typography variant='h4' >NEW USER</Typography>
           <FormControl>
             <InputLabel htmlFor='my-input'>NAME</InputLabel>
             <Input
               id='my-input'
-              onChange={(e) => onValueChange(e)}
-              name='name'
-              value={name}
             />
             <FormHelperText id='my-helper-text'>NAME</FormHelperText>
           </FormControl>
@@ -55,10 +31,7 @@ const Login = () => {
           <FormControl>
             <InputLabel htmlFor='my-input'>UNIVERSITY NUMBER</InputLabel>
             <Input
-              id='my-input'
-              onChange={(e) => onValueChange(e)}
-              name='name'
-              value={name}
+              id='my-input'  
             />
             <FormHelperText id='my-helper-text'>DETAILS</FormHelperText>
           </FormControl> 
@@ -66,10 +39,7 @@ const Login = () => {
           <FormControl>
             <InputLabel htmlFor='my-input'>EMAIL</InputLabel>
             <Input
-              id='my-input'
-              onChange={(e) => onValueChange(e)}
-              name='name'
-              value={name}
+              id='my-input'   
             />
             <FormHelperText id='my-helper-text'>DETAILS</FormHelperText>
           </FormControl> 
@@ -78,9 +48,6 @@ const Login = () => {
             <InputLabel htmlFor='my-input'>PASSWORD</InputLabel>
             <Input
               id='my-input'
-              onChange={(e) => onValueChange(e)}
-              name='name'
-              value={name}
             />
             <FormHelperText id='my-helper-text'>DETAILS</FormHelperText>
           </FormControl> 
@@ -88,11 +55,11 @@ const Login = () => {
           <Button
             variant='contained'
             color='primary'
-            onClick={() => addUserDetails()}
-          >
+            >
             {' '}
             LOGIN{' '}
           </Button>
+         
         </FormGroup>
       </Box>
     </>

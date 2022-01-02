@@ -4,8 +4,6 @@ import { makeStyles } from '@mui/styles'
 import Toolbar from '@mui/material/Toolbar'
 import { NavLink } from 'react-router-dom'
 import { Stack } from '@mui/material'
-import { useNavigate } from 'react-router-dom'
-import { Button } from '@mui/material'
 import '../Components/HomeData/Homedata.css'
 
 const useStyle = makeStyles({
@@ -27,6 +25,7 @@ const useStyle = makeStyles({
 })
 
 const Admin = () => {
+  
   const classes = useStyle()
   return (
     <>
@@ -46,18 +45,20 @@ const Admin = () => {
             </NavLink>
           </Toolbar>
         </AppBar>
+      
+     
 
-        <AppBar position='static' className='upload'>
-          UPLOAD BOOKS
-          <Toolbar className='tbx'>
-            <NavLink className={classes.tabs} to='/upload' exact>
-              UPLOAD
-            </NavLink>
-            <NavLink className={classes.tabs} to='/home' exact>
-              HOME
-            </NavLink>
-          </Toolbar>
-        </AppBar>
+      <AppBar position='static' className='upload'>
+        UPLOAD BOOKS
+        <Toolbar className='tbx'>
+          <NavLink className={classes.tabs} to='/upload1' exact>
+            UPLOAD
+          </NavLink>
+          <NavLink className={classes.tabs} to='/home' exact>
+            HOME 
+          </NavLink>
+        </Toolbar>
+      </AppBar>
       </Stack>
     </>
   )
