@@ -4,7 +4,6 @@ import FormControl from '@mui/material/FormControl'
 import { FormGroup } from '@mui/material'
 import { Input } from '@mui/material'
 import { InputLabel } from '@mui/material'
-import { FormHelperText } from '@mui/material'
 import { Box } from '@mui/system'
 import Typography from '@mui/material/Typography'
 import '../Components/HomeData/Homedata.css'
@@ -25,22 +24,18 @@ const Adlogin = () => {
         <FormGroup>
           <Typography variant='h4' >LOGIN</Typography>
 
-          <FormControl>
+          <FormControl sx={{ p: 1}}>
             <InputLabel htmlFor='my-input'>EMAIL</InputLabel>
             <Input
-              id='my-input'
-              
+              id='my-input' 
             />
-            <FormHelperText id='my-helper-text'>DETAILS</FormHelperText>
           </FormControl> 
 
-          <FormControl>
+          <FormControl  sx={{ p: 1}}>
             <InputLabel htmlFor='my-input'>PASSWORD</InputLabel>
             <Input
               id='my-input'
-              
             />
-            <FormHelperText id='my-helper-text'>DETAILS</FormHelperText>
           </FormControl> 
         
           <Button

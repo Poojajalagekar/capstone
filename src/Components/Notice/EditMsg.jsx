@@ -2,7 +2,6 @@ import FormControl from '@mui/material/FormControl';
 import { FormGroup } from '@mui/material';
 import { Input } from '@mui/material';
 import { InputLabel } from '@mui/material';
-import { FormHelperText } from '@mui/material';
 import { Box } from '@mui/system';
 import { Button } from '@mui/material';
 import Typography from '@mui/material/Typography';
@@ -55,12 +54,11 @@ const EditMsg = () => {
         </AppBar>
         <Box sx={{p: 15, margin: 'auto', maxWidth: 700,  }}>
             
-        <FormGroup>
+        <FormGroup  sx={{ p: 1}}>
         <Typography variant="h4">Edit </Typography>
         <FormControl >
         <InputLabel htmlFor="my-input">MSG</InputLabel>
         <Input id="my-input" onChange={(e) => onValueChange(e)} name='name' value={name} />
-        <FormHelperText id="my-helper-text">NEW MSG</FormHelperText>
         </FormControl>
 
        

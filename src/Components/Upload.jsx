@@ -3,7 +3,6 @@ import FormControl from '@mui/material/FormControl'
 import { FormGroup } from '@mui/material'
 import { Input } from '@mui/material'
 import { InputLabel } from '@mui/material'
-import { FormHelperText } from '@mui/material'
 import { Box } from '@mui/system'
 import { Button } from '@mui/material'
 import Typography from '@mui/material/Typography'
@@ -13,10 +12,7 @@ import { useNavigate } from 'react-router-dom'
 
 const Upload = () => {
 
-  const navigate = useNavigate()
-
- 
-   
+  const navigate = useNavigate() 
   
   return (
     <>
@@ -24,31 +20,25 @@ const Upload = () => {
       <Box sx={{ p: 15, margin: 'auto', maxWidth: 700 }}>
         <FormGroup>
           <Typography variant='h4' >UPLOAD BOOKS</Typography>
-          <FormControl>
+          <FormControl sx={{ p: 1}}>
             <InputLabel htmlFor='my-input'>BOOK NAME</InputLabel>
             <Input
               id='my-input'
-              
             />
-            <FormHelperText id='my-helper-text'>BOOK NAME</FormHelperText>
           </FormControl>
 
-          <FormControl>
+          <FormControl sx={{ p: 1}}>
             <InputLabel htmlFor='my-input'>DEPARTMENT</InputLabel>
             <Input
-              id='my-input'
-              
+              id='my-input' 
             />
-            <FormHelperText id='my-helper-text'>DETAILS</FormHelperText>
           </FormControl> 
           
-          <FormControl>
+          <FormControl sx={{ p: 1}}>
             <InputLabel htmlFor='my-input'>AUTHOR</InputLabel>
             <Input
               id='my-input'
-             
             />
-            <FormHelperText id='my-helper-text'>DETAILS</FormHelperText>
           </FormControl> 
 
           <Button
@@ -63,8 +53,7 @@ const Upload = () => {
           
           <Button
             variant='contained'
-            color='primary'
-            
+            color='primary' 
           >
             {' '}
             ADD{' '}

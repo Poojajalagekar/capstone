@@ -2,7 +2,6 @@ import FormControl from '@mui/material/FormControl'
 import { FormGroup } from '@mui/material'
 import { Input } from '@mui/material'
 import { InputLabel } from '@mui/material'
-import { FormHelperText } from '@mui/material'
 import { Box } from '@mui/system'
 import Navbar from '../HomeData/Navbar'
 import { Button } from '@mui/material'
@@ -41,7 +40,7 @@ const AddMsg = () => {
       <Box sx={{ p: 15, margin: 'auto', maxWidth: 700 }}>
         <FormGroup>
           <Typography variant='h4'>NOTICE BOARD</Typography>
-          <FormControl>
+          <FormControl  sx={{ p: 1}}>
             <InputLabel htmlFor='my-input'>MSG</InputLabel>
             <Input
               id='my-input'
@@ -49,7 +48,6 @@ const AddMsg = () => {
               name='name'
               value={name}
             />
-            <FormHelperText id='my-helper-text'>YoUR MSG PLZ</FormHelperText>
           </FormControl>
 
           <Button
