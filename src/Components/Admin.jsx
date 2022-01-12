@@ -5,6 +5,19 @@ import Toolbar from '@mui/material/Toolbar'
 import { NavLink } from 'react-router-dom'
 import { Stack } from '@mui/material'
 import '../Components/HomeData/Homedata.css'
+import Navbar from './HomeData/Navbar'
+import styled from "styled-components";
+
+const Container = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url("http://images.hellogiggles.com/uploads/2017/05/01011444/picture-of-coffee-and-a-book-photo.jpg")
+      center;
+`;
 
 const useStyle = makeStyles({
   header: {
@@ -29,6 +42,8 @@ const Admin = () => {
   const classes = useStyle()
   return (
     <>
+    <Navbar/>
+      <Container>
       <Stack spacing={7}>
         <AppBar position='static'>
           <Toolbar className='ATB'>The-Admins-Den</Toolbar>
@@ -60,6 +75,7 @@ const Admin = () => {
         </Toolbar>
       </AppBar>
       </Stack>
+      </Container>
     </>
   )
 }

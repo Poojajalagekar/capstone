@@ -12,6 +12,18 @@ import '../HomeData/Homedata.css'
 import { useNavigate } from 'react-router-dom'
 import { AppBar } from '@mui/material'
 import { Toolbar } from '@mui/material'
+import styled from "styled-components";
+
+const Container = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url("https://www.neh.gov/sites/default/files/styles/featured_image_page/public/2018-06/openbooks.jpg?h=b69e0e0e&itok=06BUz0mY")
+      center;
+`;
 
 const initialValue = {
   name: '',
@@ -34,6 +46,7 @@ const AddMsg = () => {
   return (
     <>
       <Navbar />
+      <Container>
         <AppBar position='static'>
           <Toolbar className='ATB'>ADD MESSAGES </Toolbar>
         </AppBar>
@@ -60,6 +73,7 @@ const AddMsg = () => {
           </Button>
         </FormGroup>
       </Box>
+      </Container>
     </>
   )
 }

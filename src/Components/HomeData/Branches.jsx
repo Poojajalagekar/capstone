@@ -1,20 +1,19 @@
 import { Box } from '@mui/system';
 import React, { useState } from 'react';
-
 import './Serch.css';
 
 // This holds a list of some fiction people
 // Some  have the same name but different age and id
 const BOOKS = [
-  { id: 1, name: 'Engineering Electromagnetics Solution Manual Sixth Edition', dept:'EE', age: 32 },
-  { id: 2, name: 'Electric Machines And Drives A First Course',dept:'EE', age: 30 },
-  { id: 3, name: 'Electric Power Generation The Changing Dimensions',dept:'EE', age: 40 },
-  { id: 4, name: 'Engineering Mechanics Dynamics Seventh Edition',dept:'MECH', age: 50 },
-  { id: 5, name: 'Welding Metallurgy Second Edition', dept:'MECH' , age: 30 },
-  { id: 6, name: 'Vibrations Second Edition',dept:'MECH' , age: 68 },
-  { id: 7, name: 'Soft Computing Techniques and Its Applications in Electrical Engineering',dept:'CS', age: 34 },
-  { id: 8, name: 'Clever Algorithms Nature-Inspired Programming Recipes',dept:'CS', age: 28 },
-  { id: 9, name: 'Computer Organization',dept:'CS', age: 23 },
+  { id: 1, name: 'Engineering Electromagnetics Solution Manual Sixth Edition', dept:'EE', author: 'John A Buck' },
+  { id: 2, name: 'Electric Machines And Drives A First Course',dept:'EE', author:'Ned Mohan' },
+  { id: 3, name: 'Electric Power Generation The Changing Dimensions',dept:'EE', author: 'B M Weedy,B J Cory' },
+  { id: 4, name: 'Engineering Mechanics Dynamics Seventh Edition',dept:'MECH',author: 'J. L. Meriam, L. G. Kraige' },
+  { id: 5, name: 'Welding Metallurgy Second Edition', dept:'MECH' , author: ' Randerlei Nascimento. Fellipe Viana. Gudson Melo'},
+  { id: 6, name: 'Vibrations Second Edition',dept:'MECH' , author: ' Emmanuel Dorméus'},
+  { id: 7, name: 'Soft Computing Techniques and Its Applications in Electrical Engineering',dept:'CS', author: 'Devendra K. Chaturvedi' },
+  { id: 8, name: 'Clever Algorithms Nature-Inspired Programming Recipes',dept:'CS', author: 'Jason Brownlee' },
+  { id: 9, name: 'Computer Organization',dept:'CS', author:'Dr. William Stallings '}
 ];
 
 function Branches() {
@@ -28,8 +27,8 @@ function Branches() {
     const keyword = e.target.value;
 
     if (keyword !== '') {
-      const results = BOOKS.filter((user) => {
-        return user.name.toLowerCase().startsWith(keyword.toLowerCase());
+      const results = BOOKS.filter((book) => {
+        return book.name.toLowerCase().startsWith(keyword.toLowerCase());
         // Use the toLowerCase() method to make it case-insensitive
       });
       setFoundUsers(results);
@@ -51,14 +50,14 @@ function Branches() {
         placeholder="Filter"
       />
          <Box>
-      <div className="user-list">
+      <div className="book-list">
         {foundUsers && foundUsers.length > 0 ? (
-          foundUsers.map((user) => (
-            <li key={user.id} className="user">
-              <span className="user-id">{user.id}</span>
-              <span className="user-name">{user.name}</span>
-              <span className="user-dept">{user.dept}</span>
-              <span className="user-age">{user.age} year old</span>
+          foundUsers.map((book) => (
+            <li key={book.id} className="book">
+              <span className="book-id">{book.id}</span>
+              <span className="book-name">{book.name}</span>
+              <span className="book-dept">{book.dept}</span>
+              <span className="book-author">{book.author}</span>
             </li>
           ))
         ) : (

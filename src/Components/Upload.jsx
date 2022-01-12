@@ -8,7 +8,18 @@ import { Button } from '@mui/material'
 import Typography from '@mui/material/Typography'
 import '../Components/HomeData/Homedata.css'
 import { useNavigate } from 'react-router-dom'
+import styled from "styled-components";
 
+const Container = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url("https://www.neh.gov/sites/default/files/styles/featured_image_page/public/2018-06/openbooks.jpg?h=b69e0e0e&itok=06BUz0mY")
+      center;
+`;
 
 const Upload = () => {
 
@@ -17,6 +28,7 @@ const Upload = () => {
   return (
     <>
       <Navbar />
+      <Container>
       <Box sx={{ p: 15, margin: 'auto', maxWidth: 700 }}>
         <FormGroup>
           <Typography variant='h4' >UPLOAD BOOKS</Typography>
@@ -61,6 +73,7 @@ const Upload = () => {
         
         </FormGroup>
       </Box>
+      </Container>
     </>
   )
   }

@@ -85,7 +85,7 @@ const AllMsg = () => {
                   <StyledTableCell align='right'>
                     <Button
                       size='small'
-                      color='primary'
+                      color='secondary'
                       variant='contained'
                       style={{ marginRight: 10 }}
                       href={`/admin/edit/${msg.id}`}

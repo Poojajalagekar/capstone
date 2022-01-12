@@ -9,33 +9,39 @@
     width: 300px;
   }
   
-  .user-list {
+  .book-list {
     margin-top: 30px;
   }
   
-  .user {
+  .book {
     list-style: none;
     margin: 10px 0;
     padding: 10px;
     background: #eee;
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
   }
   
-  .user-id {
+  .book-id {
     color: red;
     margin-right: 20px;
   }
   
-  .user-name {
+  .book-name {
     color: blue;
+    margin-right: 20px;
+    font-size: larger;
   }
   
-  .user-dept {
+  .book-dept {
     color: rgb(255, 136, 0);
-    margin-left: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:large ;
   }
 
-  .user-age {
-    margin-left: auto;
+  .book-author {
+    color: rgb(204, 39, 163);
+    margin-left: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
   }

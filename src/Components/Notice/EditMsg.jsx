@@ -14,6 +14,18 @@ import { editMsg } from './api';
 import Navbar from '../HomeData/Navbar';
 import { AppBar } from '@mui/material';
 import { Toolbar } from '@mui/material';
+import styled from "styled-components";
+
+const Container = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url("https://www.neh.gov/sites/default/files/styles/featured_image_page/public/2018-06/openbooks.jpg?h=b69e0e0e&itok=06BUz0mY")
+      center;
+`;
 
 const initialValue = {
   name: ''
@@ -49,6 +61,7 @@ const EditMsg = () => {
     return ( 
          <>
         <Navbar />
+        <Container>
         <AppBar position='static'>
           <Toolbar className='ATB'>EDIT MESSAGES </Toolbar>
         </AppBar>
@@ -60,12 +73,11 @@ const EditMsg = () => {
         <InputLabel htmlFor="my-input">MSG</InputLabel>
         <Input id="my-input" onChange={(e) => onValueChange(e)} name='name' value={name} />
         </FormControl>
-
-       
       <Button variant="contained" color="primary" onClick={() => editMsgDetails()}> EDIT</Button>
       </FormGroup>
     
       </Box>
+      </Container>
       </>
     )
 }

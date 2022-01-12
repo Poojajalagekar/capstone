@@ -11,6 +11,18 @@ import 'bootstrap';
 // Worker
 import { Worker } from '@react-pdf-viewer/core'; // install this library
 import Navbar from './HomeData/Navbar';
+import styled from "styled-components";
+
+const Container = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url("https://media.istockphoto.com/photos/law-books-picture-id467505749?k=6&m=467505749&s=612x612&w=0&h=q1cl0-LeOWrRuVl1x9N_V4ZtVE7DyO9s3B8KJ4_YZ60=")
+      center;
+`;
 
 const Pdf = () => {
   
@@ -61,6 +73,7 @@ const Pdf = () => {
   return (
       <>
       <Navbar />
+      <Container>
     <div className='container'>
 
     <br></br>
@@ -88,6 +101,7 @@ const Pdf = () => {
       {!viewPdf&&<>No pdf file selected</>}
       </div>
     </div>
+    </Container>
     </>
   )
 }

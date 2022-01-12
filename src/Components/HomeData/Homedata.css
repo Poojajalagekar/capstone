@@ -7,9 +7,12 @@ body {
 }
 
 .merger {
-  background-image: linear-gradient(90deg, #8bc2c4 5%, #3c92d4 44%, #336db9);
-
-  height: 100vh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url("https://static2.srcdn.com/wordpress/wp-content/uploads/2020/02/Books-Feat-Image.jpg")
+      center;
 }
 
 .navBar {
@@ -21,7 +24,7 @@ body {
   align-items: center;
   height: 100px;
   border: 1px solid black;
-  background-image: linear-gradient(90deg, #9d0b28, #e46ba1 80%, #9d0b28);
+  background-image: linear-gradient(90deg, #dbf371, #eb4fe3 50%, #1fee6f);
 }
 
 .hone {
@@ -31,7 +34,7 @@ body {
   color: transparent;
 }
 
-.branches {
+/* .branches {
   background-color: white;
   position: relative;
   top: 180px;
@@ -45,8 +48,8 @@ body {
   width: 97vw;
   border: 2px solid rgb(0, 0, 0);
   padding: 15px;
-}
-.one {
+} */
+/* .one {
   border: 2px solid black;
   border-radius: 15px;
   text-align: center;
@@ -72,10 +75,10 @@ body {
 .navRight {
   font-family: serif;
   font-size: 40px;
-}
+} */
 
 .tbx {
-  background-image: linear-gradient(120deg, #91dfd2 50%, #52eb85 60%);
+  background-image: linear-gradient(120deg, #ce2395 50%, #e9e50a 60%);
   color: black;
   display: flex;
 
@@ -93,6 +96,7 @@ body {
   font-family: 'Bebas Neue', cursive;
   font-weight: bolder;
   font-size: 62px;
+  background-image: linear-gradient(120deg, #f07d7d 50%, #7aa7ec 60%);
 }
 
 .upload {
@@ -104,29 +108,5 @@ body {
   position: relative;
   left: 850px;
   top: 35px;
-}
-
-.searchbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 100vw;
-}
-.search {
-  margin-left: -200px;
-  width: 500px;
-  padding: 10px;
-  background-color: #eee;
-  outline: none;
-  border: 1px solid rgb(63, 61, 61);
-  border-radius: 20px;
-}
-.database {
-  background-color: #333;
-  padding: 25px;
-  margin: 25px 200px 0 0;
-  height: 20vh;
-  overflow: scroll;
-  color: #fff;
 }
 
